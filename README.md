@@ -1,5 +1,5 @@
 # project_image processing <img width="50" hieght="50" src="">
-a GUI application to apply basic image processing filters built with python, openCV and tkinter 
+A GUI application to apply basic image processing filters built with python, openCV and tkinter 
 
 # Features
 - Applying the filters in image. 
