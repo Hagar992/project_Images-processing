@@ -130,9 +130,9 @@ Here's how opening works:
 14- The median filter is a nonlinear digital filtering technique used primarily for noise reduction in images. Unlike linear filters, such as Gaussian blur or
              mean filter, the median filter replaces each pixel's value with the median value of the neighboring pixels within a specified window. This property makes it effective at preserving edges while reducing noise.
   - Here's how the median filter works:
-        - 1-Define a window (typically a square or rectangular neighborhood) around each pixel in the image.
-        - 2-Sort the pixel values within the window.
-        - 3-Replace the pixel's value with the median value from the sorted list.
+       -  1-Define a window (typically a square or rectangular neighborhood) around each pixel in the image.
+       -  2-Sort the pixel values within the window.
+       -  3-Replace the pixel's value with the median value from the sorted list.
         - 4-Move the window to the next pixel and repeat the process until all pixels have been processed.
 
 15- The mean filter, also known as the average filter, is a simple linear filter used for smoothing and noise reduction in images. It works by replacing each
