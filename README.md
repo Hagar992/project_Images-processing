@@ -133,51 +133,51 @@ Here's how opening works:
        -  1-Define a window (typically a square or rectangular neighborhood) around each pixel in the image.
        -  2-Sort the pixel values within the window.
        -  3-Replace the pixel's value with the median value from the sorted list.
-        - 4-Move the window to the next pixel and repeat the process until all pixels have been processed.
+       -  4-Move the window to the next pixel and repeat the process until all pixels have been processed.
 
 15- The mean filter, also known as the average filter, is a simple linear filter used for smoothing and noise reduction in images. It works by replacing each
               pixel's value with the average value of the neighboring pixels within a specified window.
   - Here's how the mean filter works:
-        - 1-Define a window (typically a square or rectangular neighborhood) around each pixel in the image.
-        - 2-Compute the average value of the pixel intensities within the window.
-        - 3-Replace the pixel's value with the computed average.
-        - 4-Move the window to the next pixel and repeat the process until all pixels have been processed.
+       -  1-Define a window (typically a square or rectangular neighborhood) around each pixel in the image.
+       -  2-Compute the average value of the pixel intensities within the window.
+       -  3-Replace the pixel's value with the computed average.
+       -  4-Move the window to the next pixel and repeat the process until all pixels have been processed.
 
 16- LPF stands for Low Pass Filter. It's a type of filter used in signal processing and image processing to allow low-frequency components to pass through 
                while attenuating high-frequency components. In image processing, low-pass filtering is often used for noise reduction and smoothing.
   - Here's how a low-pass filter works:
-        - 1-Define a window (typically a square or rectangular neighborhood) around each pixel in the image.
-        - 2-Compute the weighted average of the pixel intensities within the window.
-        - 3-Replace the pixel's value with the computed average.
-        - 4-Move the window to the next pixel and repeat the process until all pixels have been processed.
+       -  1-Define a window (typically a square or rectangular neighborhood) around each pixel in the image.
+       -  2-Compute the weighted average of the pixel intensities within the window.
+       -  3-Replace the pixel's value with the computed average.
+       -  4-Move the window to the next pixel and repeat the process until all pixels have been processed.
 
 17- HPF stands for High Pass Filter. It's a type of filter used in image processing to enhance high-frequency components while suppressing low-frequency 
                components. High-pass filtering is often used for edge detection and sharpening of images.
   - Here's how a high-pass filter works:
-       - 1- Define a window (typically a square or rectangular neighborhood) around each pixel in the image.
-       - 2- Subtract the weighted average of the pixel intensities within the window from the value of the central pixel.
-       - 3- This process highlights regions of rapid intensity change (such as edges) while suppressing regions of uniform intensity.
+       -  1- Define a window (typically a square or rectangular neighborhood) around each pixel in the image.
+       -  2- Subtract the weighted average of the pixel intensities within the window from the value of the central pixel.
+       -  3- This process highlights regions of rapid intensity change (such as edges) while suppressing regions of uniform intensity.
 
 18- The Prewitt operator is a widely used edge detection algorithm in image processing. It calculates the gradient of an image intensity function, which
                  highlights areas of rapid intensity change, typically corresponding to edges.
   - Here's how the Prewitt operator works:
-        - 1-It performs convolution of the image with two 3x3 kernels (one for horizontal changes and one for vertical changes).
-        - 2-The horizontal kernel detects vertical edges, while the vertical kernel detects horizontal edges.
-        - 3-The magnitude of the gradient at each pixel is computed as the square root of the sum of squares of the horizontal and vertical gradients.
+       -  1-It performs convolution of the image with two 3x3 kernels (one for horizontal changes and one for vertical changes).
+       -  2-The horizontal kernel detects vertical edges, while the vertical kernel detects horizontal edges.
+       -  3-The magnitude of the gradient at each pixel is computed as the square root of the sum of squares of the horizontal and vertical gradients.
 
 19- The Robert operator is a simple edge detection algorithm used to find edges in images. It is based on convolution with two small kernels.
   - Here's how the Robert operator works:
-        - 1-It performs convolution of the image with two 2x2 kernels.
-        - 2-The first kernel detects edges with a 45-degree orientation, while the second kernel detects edges with a 135-degree orientation.
-        - 3-The magnitude of the gradient at each pixel is computed as the square root of the sum of squares of the gradients calculated using the two kernels.
+       -  1-It performs convolution of the image with two 2x2 kernels.
+       -  2-The first kernel detects edges with a 45-degree orientation, while the second kernel detects edges with a 135-degree orientation.
+       -  3-The magnitude of the gradient at each pixel is computed as the square root of the sum of squares of the gradients calculated using the two kernels.
 
 20- Histogram equalization is a technique used in image processing to improve the contrast of an image by redistributing pixel intensities. It effectively 
              stretches the histogram of pixel intensities to cover a wider range of values, thus enhancing the overall contrast of the image.
   - Here's how histogram equalization works:
-        -  1-Compute the histogram of the input image, which represents the frequency distribution of pixel intensities.
-        -  2-Compute the cumulative distribution function (CDF) of the histogram, which represents the cumulative sum of pixel intensities.
-        -  3-Map the pixel intensities of the input image to new intensity values using the CDF, effectively redistributing the pixel intensities.
-        -  4-Generate the equalized image by replacing each pixel's intensity with its corresponding mapped intensity value.
+       -   1-Compute the histogram of the input image, which represents the frequency distribution of pixel intensities.
+       -   2-Compute the cumulative distribution function (CDF) of the histogram, which represents the cumulative sum of pixel intensities.
+       -   3-Map the pixel intensities of the input image to new intensity values using the CDF, effectively redistributing the pixel intensities.
+       -   4-Generate the equalized image by replacing each pixel's intensity with its corresponding mapped intensity value.
   
  
  
