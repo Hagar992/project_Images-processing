@@ -26,16 +26,13 @@ a GUI application to apply basic image processing filters built with python, ope
 
 1- 'color': Displays the original image without any modifications,
             meaning no filter is applied.
-- يعرض الصورة الأصلية دون أي تعديل عليها، بمعنى أنه لا يتم تطبيق أي تصفية على الصورة.
 
 2- 'gray': Converts the image to a grayscale image by converting the
            image to the grayscale color space.
-- يحول الصورة إلى صورة بالأبيض والأسود (صورة رمادية) عن طريق تحويل الصورة إلى مساحة الألوان الرمادية.
 
 3- 'threshold': Converts the image to a binary image (black and white)
                 using a specified threshold. 
                 Pixels with values below the threshold become black, and pixels with values above the threshold become white.
--   يقوم بتحويل الصورة إلى صورة ثنائية (أبيض وأسود) باستخدام عتبة محددة. البكسلات التي تكون قيمها أقل من العتبة تصبح سوداء، والبكسلات التي تكون قيمها أعلى من العتبة تصبح بيضاء.    
 
 4- Increasing contrast involves enhancing the difference in intensity between the brightest and darkest areas of an image, resulting in a more visually 
              striking appearance with sharper highlights and shadows. It's often used to make images appear more vibrant and dynamic.
@@ -44,7 +41,6 @@ a GUI application to apply basic image processing filters built with python, ope
              up the intensity values across the entire range of intensities. This effectively expands the intensity range, making the bright areas brighter and the dark areas darker.
         2- Additive and Multiplicative Factors: You can achieve contrast enhancement by applying both additive and multiplicative factors to the intensity
              values. The additive factor shifts all intensity values uniformly, while the multiplicative factor scales the intensity values. By increasing the multiplicative factor above 1, you effectively increase the contrast.
-- يزيد من التباين في الصورة بزيادة فروق الإضاءة بين البكسلات.
 
 5- Decreasing contrast involves reducing the difference in intensity between the brightest and darkest areas of an image, resulting in a flatter appearance
              with less distinction between different elements. It can be useful in scenarios where the original image has very high contrast, leading to overly pronounced highlights and shadows.
@@ -54,7 +50,6 @@ a GUI application to apply basic image processing filters built with python, ope
         2-Additive and Multiplicative Factors: You can achieve contrast reduction by applying both additive and multiplicative factors to the intensity values.
             The additive factor shifts all intensity values uniformly, while the multiplicative factor scales the intensity values. By decreasing the 
              multiplicative factor below 1, you effectively reduce the contrast.
-- يقلل من التباين في الصورة بتقليل فروق الإضاءة بين البكسلات.
 
 
 6- The Hough Transform is a popular technique in image processing used primarily for detecting geometrical shapes, such as lines, circles, and ellipses, in an
@@ -66,8 +61,7 @@ Here's a brief explanation of how the Hough Circle Transform works:
        3-Thresholding: After processing all edge pixels, you look for peaks in the accumulator array. These peaks represent potential circles in the image.
             To reduce false positives, you may apply a threshold to filter out low-accumulated values.
        4-Circle Drawing: Once you have identified the centers and radii of the circles, you can draw them on the original image.
-- يستخدم خوارزمية تحويل هاف للكشف عن الدوائر في الصورة.
-
+  
 7- Opening is a morphological operation used in image processing to remove small objects and smooth out the boundaries of foreground objects (white regions) in
              binary images. It is the opposite of closing operation.
 Here's how opening works:
@@ -75,7 +69,7 @@ Here's how opening works:
        2- First, erosion removes small objects and sharpens the boundaries of foreground objects by shrinking them.
        3- Then, dilation expands the boundaries of the eroded image, effectively smoothing out the contours of objects.
        4- The combination of erosion followed by dilation helps to remove noise and small objects while preserving the overall structure of larger objects.
-- يقوم بتقليل الضوضاء البيضاء في الصورة من خلال تنفيذ عملية فتح على الصورة.
+
 
 8- Closing is a morphological operation used in image processing to fill in small holes and gaps, as well as to smooth the boundaries of foreground objects 
            (white regions) in binary images.
@@ -84,7 +78,7 @@ Here's how opening works:
        2- First, dilation expands the boundaries of foreground objects, filling in small holes and gaps.
        3-Then, erosion shrinks the boundaries of the dilated image, smoothing out the rough edges created by dilation.
        4-The combination of dilation followed by erosion helps to close gaps between nearby foreground objects and to smooth the contours of objects.
-- يقوم بإغلاق الثقوب في الكائنات البيضاء في الصورة من خلال تنفيذ عملية الإغلاق على الصورة.
+
 
 9- Erosion is another fundamental morphological operation used in image processing, particularly in binary images, to reduce the size of foreground objects 
           (white regions) and to detach connected objects.
@@ -92,7 +86,7 @@ Here's how opening works:
         1-It involves sliding a structuring element (also known as a kernel) over the image.
         2-At each position of the kernel, if all pixels in the input image under the kernel are white (foreground), the center pixel of the kernel in the output image remains white; otherwise, it becomes black (background).
         3-The size and shape of the structuring element determine the degree of erosion. A larger kernel results in more erosion of the foreground regions.
-- يقلل من حجم الكائنات البيضاء في الصورة عن طريق تنفيذ عملية التآكل على الصورة.
+
 
 10- Dilation is a morphological operation used in image processing to enhance features like edges and boundaries in binary images. It works by expanding the 
              boundaries of regions of foreground pixels (typically represented as white) in an image.
@@ -100,7 +94,6 @@ Here's how opening works:
        1- It involves sliding a structuring element (also known as a kernel) over the image.
        2- At each position of the kernel, if any pixel in the input image is white (foreground), the corresponding pixel in the output image becomes white.
        3- The size and shape of the structuring element determine the extent of dilation. A larger kernel results in more expansion of the foreground regions.
--   يزيد من حجم الكائنات البيضاء في الصورة عن طريق تنفيذ عملية التوسيع على الصورة.
 
 11- The Gaussian filter, also known as Gaussian blur, is a commonly used image processing filter for smoothing images. It works by convolving the image with a Gaussian kernel, which is a 2D matrix representing the shape of a Gaussian distribution.
   - Here's how the Gaussian filter works:
@@ -109,7 +102,7 @@ Here's how opening works:
         3-Convolve the image with the Gaussian kernel. This involves sliding the kernel over the entire image and computing a weighted average of the pixel 
              values under the kernel at each position.
         4-Replace each pixel in the original image with the corresponding weighted average value obtained from the convolution.
-- يقوم بتطبيق عملية لتنعيم الصورة.
+
 
 12- The Sobel filter, named after its inventor Irwin Sobel, is a popular edge detection filter used in image processing. It computes the gradient of the image 
               intensity at each pixel, highlighting regions of rapid intensity change which often correspond to edges.
@@ -126,14 +119,13 @@ Here's how opening works:
            -1 -2 -1
             0  0  0
             1  2  1
--  يقوم بكشف حواف الصورة
 
 13- The Laplacian filter, also known as Laplacian of Gaussian (LoG), is a derivative filter used for edge detection and image sharpening in image processing. 
               It computes the second derivative of the image intensity to detect regions of rapid intensity change, which often correspond to edges.
   - Here's how the Laplacian filter works:
         1-Compute the second derivative of the image intensity in both the horizontal and vertical directions.
         2-Combine the second derivatives to obtain the Laplacian image, which highlights regions of rapid intensity change.
--  يقوم بكشف حواف الصورة 
+ 
 
 14- The median filter is a nonlinear digital filtering technique used primarily for noise reduction in images. Unlike linear filters, such as Gaussian blur or
              mean filter, the median filter replaces each pixel's value with the median value of the neighboring pixels within a specified window. This property makes it effective at preserving edges while reducing noise.
@@ -186,6 +178,6 @@ Here's how opening works:
         2-Compute the cumulative distribution function (CDF) of the histogram, which represents the cumulative sum of pixel intensities.
         3-Map the pixel intensities of the input image to new intensity values using the CDF, effectively redistributing the pixel intensities.
         4-Generate the equalized image by replacing each pixel's intensity with its corresponding mapped intensity value.
--  يقوم بتعديل توزيع الإضاءة في الصورة لتحسين التباين وتحسين جودة الصورة.   
+  
  
  
