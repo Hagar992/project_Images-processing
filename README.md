@@ -110,12 +110,12 @@ a GUI application to apply basic image processing filters built with python, ope
        -  1-Compute the gradient of the image intensity in the horizontal and vertical directions separately.
        -  2-Combine the horizontal and vertical gradient images to obtain the magnitude of the gradient at each pixel.
        -  3-Optionally, compute the direction of the gradient at each pixel.
-       - The Sobel filter typically uses a 3x3 kernel for both the    horizontal and vertical gradients. The kernels are as follows:
-       - Horizontal Sobel Kernel:
+  - The Sobel filter typically uses a 3x3 kernel for both the    horizontal and vertical gradients. The kernels are as follows:
+  - Horizontal Sobel Kernel:
        - -1  0  1
        - -2  0  2
        - -1  0  1
-       - Vertical Sobel Kernel:
+  - Vertical Sobel Kernel:
        - -1 -2 -1
        -  0  0  0
        -  1  2  1
