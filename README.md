@@ -174,10 +174,10 @@ Here's how opening works:
 20- Histogram equalization is a technique used in image processing to improve the contrast of an image by redistributing pixel intensities. It effectively 
              stretches the histogram of pixel intensities to cover a wider range of values, thus enhancing the overall contrast of the image.
   - Here's how histogram equalization works:
-        - 1-Compute the histogram of the input image, which represents the frequency distribution of pixel intensities.
-        - 2-Compute the cumulative distribution function (CDF) of the histogram, which represents the cumulative sum of pixel intensities.
-        - 3-Map the pixel intensities of the input image to new intensity values using the CDF, effectively redistributing the pixel intensities.
-        - 4-Generate the equalized image by replacing each pixel's intensity with its corresponding mapped intensity value.
+        -  1-Compute the histogram of the input image, which represents the frequency distribution of pixel intensities.
+        -  2-Compute the cumulative distribution function (CDF) of the histogram, which represents the cumulative sum of pixel intensities.
+        -  3-Map the pixel intensities of the input image to new intensity values using the CDF, effectively redistributing the pixel intensities.
+        -  4-Generate the equalized image by replacing each pixel's intensity with its corresponding mapped intensity value.
   
  
  
